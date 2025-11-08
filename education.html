@@ -45,8 +45,9 @@
         
         <div class="chip">
   <i class="bi bi-code-slash"></i>
-  IT Enthusiast
+  <span id="typing"></span> <!--IT Entushiast-->
 </div>
+
 
         <h2>DEKU</h2>
       </div>
@@ -90,7 +91,74 @@
 <footer class="copyright">
     © 2025 DEKU / Ahm Reyhan M (24161562078) • All Rights Reserved
 </footer>
+<canvas id="particles"></canvas>
 
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+const particles = [];
+const particleCount = 60; // lebih sedikit biar ringan
+const maxDistance = 80; // jarak garis lebih pendek
+
+for (let i = 0; i < particleCount; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2 + 1,
+    vx: (Math.random() - 0.5) * 0.5,
+    vy: (Math.random() - 0.5) * 0.5,
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach((p, i) => {
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(135, 206, 250, 0.8)";
+    ctx.shadowBlur = 6;
+    ctx.shadowColor = "lightskyblue";
+    ctx.fill();
+
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = p.x - particles[j].x;
+      const dy = p.y - particles[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < maxDistance) {
+        ctx.beginPath();
+        ctx.strokeStyle = "rgba(135,206,250," + (1 - dist / maxDistance) + ")";
+        ctx.lineWidth = 0.7;
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.stroke();
+      }
+    }
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+});
+</script>
+
+<button id="scrollTopBtn">↑</button>
+<script src="/assets/js/script.js"></script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
