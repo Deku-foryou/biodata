@@ -1,6 +1,5 @@
-// ======================================
+
 // A. Typing Effect
-// ======================================
 const typingText = "IT Enthusiast";
 const typingElement = document.getElementById("typing");
 let i = 0;
@@ -15,9 +14,9 @@ function typeEffect() {
 typeEffect();
 
 
-// ======================================
+
 // B. Scroll To Top Button
-// ======================================
+
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
@@ -29,9 +28,8 @@ scrollBtn.addEventListener("click", () => {
 });
 
 
-// ======================================
+
 // C. Dark Mode Toggle
-// ======================================
 const body = document.body;
 const savedTheme = localStorage.getItem("theme");
 
@@ -48,9 +46,9 @@ function toggleDarkMode() {
 }
 
 
-// ======================================
+
 // D. Navbar Active Auto
-// ======================================
+
 const currentPage = window.location.pathname.split("/").pop();
 document.querySelectorAll(".nav-link").forEach(link => {
   if (link.getAttribute("href") === currentPage) {
@@ -59,9 +57,8 @@ document.querySelectorAll(".nav-link").forEach(link => {
 });
 
 
-// ======================================
+
 // E. Skill Progress Animation
-// ======================================
 const skillBars = document.querySelectorAll(".fill");
 
 function animateSkills() {
@@ -80,9 +77,8 @@ window.addEventListener("scroll", () => {
 });
 
 
-// ======================================
+
 // F. Modal Certificate Animation
-// ======================================
 const modals = document.querySelectorAll(".modal");
 modals.forEach(modal => {
   modal.classList.add("fade");

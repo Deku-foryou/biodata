@@ -15,6 +15,7 @@ body {
   line-height: 1.6;
   letter-spacing: 0.3px;
   color: #e6e6e6;
+  padding-top: 70px;
 }
 
 h1, h2, h3, h4 {
@@ -37,6 +38,7 @@ h1, h2, h3, h4 {
   transition: 0.3s ease;
   text-shadow: 0 0 8px rgba(135, 206, 250, 0.4);
   padding: 4px 0;
+  
 }
 
 .navbar-brand:hover {
