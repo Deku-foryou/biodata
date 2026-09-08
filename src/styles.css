@@ -439,7 +439,11 @@ html {
   box-shadow: 4px 8px 0 lightskyblue;
 }
 .certificate-img {
+  display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 2339 / 1653;
+  object-fit: contain;
   border-radius: 8px;
   transition: 0.3s ease;
   cursor: pointer;
@@ -477,6 +481,30 @@ html {
 .certificate-page {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
+}
+
+.certificate-grid {
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .certificate-grid {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .certificate-grid > [class*="col-"] {
+    width: 100%;
+    max-width: 360px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .certificate-card {
+    max-width: 100%;
+  }
 }
 
 #scrollTopBtn {
