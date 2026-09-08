@@ -176,7 +176,7 @@ function CertificatePage() {
     <section className="container mt-5 text-center certificate-page">
       <h2 className="hover-text">Training &amp; Bootcamp</h2>
       <p className="text-secondary mb-4">Completed Trainings :</p>
-      <div className="row justify-content-center g-4">
+      <div className="row certificate-grid justify-content-center g-4">
         {certificates.map(([image, title]) => (
           <div className="col-10 col-md-4" key={title}>
             <div
