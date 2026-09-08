@@ -5,22 +5,22 @@ import ProfileCard from "./components/ProfileCard";
 import FooterNav from "./components/FooterNav";
 import ParticleBackground from "./components/ParticleBackground";
 import ScrollTopButton from "./components/ScrollTopButton";
-import cssLogo from "../assets/image/css.svg";
-import jsLogo from "../assets/image/js.svg";
-import phpLogo from "../assets/image/php.svg";
-import htmlLogo from "../assets/image/HTML Logotype.svg";
-import vscodeLogo from "../assets/image/Vscode Logotype.svg";
-import githubLogo from "../assets/image/GitHub (1).svg";
-import bootstrapLogo from "../assets/image/Bootstrap Logotype.svg";
-import figmaLogo from "../assets/image/Figma (1).svg";
-import pythonCertificate from "../assets/image/python fundamental-1.svg";
-import networkCertificate from "../assets/image/network-1.svg";
-import linuxCertificate from "../assets/image/linux-1.svg";
-import vmCertificate from "../assets/image/vm-1.svg";
-import instagramIcon from "../assets/image/ig.svg";
-import facebookIcon from "../assets/image/fb.svg";
-import whatsappIcon from "../assets/image/wa.svg";
-import githubIcon from "../assets/image/github.svg";
+import cssLogo from "../assets/image/css.webp";
+import jsLogo from "../assets/image/js.webp";
+import phpLogo from "../assets/image/php.webp";
+import htmlLogo from "../assets/image/HTML Logotype.webp";
+import vscodeLogo from "../assets/image/Vscode Logotype.webp";
+import githubLogo from "../assets/image/GitHub (1).webp";
+import bootstrapLogo from "../assets/image/Bootstrap Logotype.webp";
+import figmaLogo from "../assets/image/Figma (1).webp";
+import pythonCertificate from "../assets/image/python fundamental-1.webp";
+import networkCertificate from "../assets/image/network-1.webp";
+import linuxCertificate from "../assets/image/linux-1.webp";
+import vmCertificate from "../assets/image/vm-1.webp";
+import instagramIcon from "../assets/image/ig.webp";
+import facebookIcon from "../assets/image/fb.webp";
+import whatsappIcon from "../assets/image/wa.webp";
+import githubIcon from "../assets/image/github.webp";
 
 function ProfilePage({ children }) {
   return (
@@ -133,7 +133,7 @@ function SocialMediaPage() {
           <div className="section" key={account.title}>
             <h3 className="hover-text">{account.title}</h3>
             <a href={account.href} className="social-link" target="_blank" rel="noreferrer">
-              <img src={account.icon} alt={account.alt} className="social-icon" />
+              <img src={account.icon} alt={account.alt} className="social-icon" width="28" height="28" loading="lazy" />
               <b>{account.text}</b>
             </a>
           </div>
@@ -155,7 +155,7 @@ function TechStackPage() {
       <p className="text-secondary mb-4">Some of the tech stack &amp; Tools I use:</p>
       <div className="tech-box">
         {techStack.map(([image, name]) => (
-          <div className="tech-item" key={name}><img src={image} alt={name} /><p>{name}</p></div>
+          <div className="tech-item" key={name}><img src={image} alt={name} width="70" height="70" loading="lazy" /><p>{name}</p></div>
         ))}
       </div>
     </section>
@@ -190,7 +190,7 @@ function CertificatePage() {
                 }
               }}
             >
-              <img src={image} className="certificate-img" alt={title} />
+              <img src={image} className="certificate-img" alt={title} width="2339" height="1653" loading="lazy" />
               <p className="cert-title">{title}</p>
               <p className="cert-desc">Aguna Course - 2024</p>
             </div>
@@ -207,7 +207,7 @@ function CertificatePage() {
         >
           <div className="certificate-modal-content" onClick={(event) => event.stopPropagation()}>
             <button type="button" className="certificate-modal-close" aria-label="Close certificate" onClick={() => setSelectedCertificate(null)}>×</button>
-            <img src={selectedCertificate.image} className="popup-image" alt={selectedCertificate.title} />
+            <img src={selectedCertificate.image} className="popup-image" alt={selectedCertificate.title} width="2339" height="1653" />
           </div>
         </div>
       )}
