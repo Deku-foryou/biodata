@@ -5,22 +5,22 @@ import ProfileCard from "./components/ProfileCard";
 import FooterNav from "./components/FooterNav";
 import ParticleBackground from "./components/ParticleBackground";
 import ScrollTopButton from "./components/ScrollTopButton";
-import cssLogo from "../assets/image/css.png";
-import jsLogo from "../assets/image/js.png";
-import phpLogo from "../assets/image/php.png";
-import htmlLogo from "../assets/image/HTML Logotype.png";
-import vscodeLogo from "../assets/image/Vscode Logotype.png";
-import githubLogo from "../assets/image/GitHub (1).png";
-import bootstrapLogo from "../assets/image/Bootstrap Logotype.png";
-import figmaLogo from "../assets/image/Figma (1).png";
-import pythonCertificate from "../assets/image/python fundamental-1.png";
-import networkCertificate from "../assets/image/network-1.png";
-import linuxCertificate from "../assets/image/linux-1.png";
-import vmCertificate from "../assets/image/vm-1.png";
-import instagramIcon from "../assets/image/ig.png";
-import facebookIcon from "../assets/image/fb.png";
-import whatsappIcon from "../assets/image/wa.png";
-import githubIcon from "../assets/image/github.png";
+import cssLogo from "../assets/image/css.svg";
+import jsLogo from "../assets/image/js.svg";
+import phpLogo from "../assets/image/php.svg";
+import htmlLogo from "../assets/image/HTML Logotype.svg";
+import vscodeLogo from "../assets/image/Vscode Logotype.svg";
+import githubLogo from "../assets/image/GitHub (1).svg";
+import bootstrapLogo from "../assets/image/Bootstrap Logotype.svg";
+import figmaLogo from "../assets/image/Figma (1).svg";
+import pythonCertificate from "../assets/image/python fundamental-1.svg";
+import networkCertificate from "../assets/image/network-1.svg";
+import linuxCertificate from "../assets/image/linux-1.svg";
+import vmCertificate from "../assets/image/vm-1.svg";
+import instagramIcon from "../assets/image/ig.svg";
+import facebookIcon from "../assets/image/fb.svg";
+import whatsappIcon from "../assets/image/wa.svg";
+import githubIcon from "../assets/image/github.svg";
 
 function ProfilePage({ children }) {
   return (
